@@ -146,7 +146,7 @@ const data = [
     <span class='expandButton'></span>
   </div> */}
 
-  const articles = document.querySelector('.articles');
+const articles = document.querySelector('.articles');
 
   data.forEach(data => {
   articles.appendChild(createData(data))

@@ -36,37 +36,36 @@ let menuItems = [
 
 // Step 1 create new elements 
 
-function createMenu(array); {
+const menuBar = document.querySelector('.header');   
+
+menuBar.appendChild(createMenu(menuItems));
+
+function createMenu(array) {
 
 const menu = document.createElement('div');
 const ul = document.createElement('ul');
 
 // Set up structure of elements 
 
-menu.appendChild(ul)
+menu.appendChild(ul);
 
 // Add classes 
 menu.classList.add('menu');
-
-// Set text context 
-
-menu.textContent = data.
 
 
 
 
 menuItems.forEach(data => {
-  header.appendChild(createMenu(data))
+  const list = document.createElement('li')
+  ul.appendChild(list);
+  list.textContent = data;
 })
 
+const button = document.querySelector('.menu-button')
 
-
-
-
-
-
-
-
+button.addEventListener('click', () => {
+  menu.classList.toggle ('menu--open')
+})
 
 return menu 
 
